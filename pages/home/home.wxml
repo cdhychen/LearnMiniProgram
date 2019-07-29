@@ -1,2 +1,5 @@
 <!--pages/home/home.wxml-->
 <text class="title">test</text>
+
+<view>1.知识点1</view>
+<view>testestestes</view>
