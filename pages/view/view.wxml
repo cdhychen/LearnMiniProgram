@@ -1,0 +1,25 @@
+<!--pages/view/view.wxml-->
+<!--1.view的基本使用-->
+<view>https://developers.weixin.qq.com/miniprogram/dev/component/view.html</view>
+<view class="box">嘿嘿</view>
+<view>哈哈</view>
+
+<!--2.hover-calss:当用户按下组件时，显示的样式-->
+<view class="box1" 
+      hover-class="box1-hover" 
+      hover-start-time="10" 
+      hover-stay-time="100">
+  hover-calss:当用户按下组件时，显示的样式
+</view>
+
+<!--3.hover-stop-propagation:阻止祖先节点点击态-->
+<view class="box2" 
+        hover-class="box2-hover">
+  <view class="box1" 
+        hover-class="box1-hover" 
+        hover-start-time="10" 
+        hover-stay-time="100"
+        hover-stop-propagation="{{false}}">
+    hover-calss:当用户按下组件时，显示的样式
+  </view>
+</view>

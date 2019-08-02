@@ -1,0 +1,35 @@
+<!--pages/image/image.wxml-->
+<!--1.image的基本使用
+重点：
+1.image组件可以写成单标签，也可以修改成双标签
+2.image默认有自己的大小：320X240
+3.image组件是一个行内块级元素（inline-block）
+-->
+<!--<image ></image>
+<image />-->
+
+<!---2.src:本地地址/远程地址-->
+<image src="../../assets/test/test.jpg" />
+<image src="/assets/test/test.jpg" />
+<image src="http://img.gaosan.com/upload/201611/6361410881390606119826380.jpg" />
+
+
+<!---补充：显示相册中的图片-->
+<button bindtap="handleChooseAlbum">选中图片</button>
+<image src="{{imagePath}}"/>
+
+<!--3.bindload:监听图片加载完成
+      lazy-load：图片的懒加载
+-->
+<image  wx:for="{{5}}"
+        src="http://img.gaosan.com/upload/201611/6361410881390606119826380.jpg"
+        bindload="handleImageLoad"
+        lazy-load/>
+
+
+<!---4.show-menu-by-longpress:长按图片出现识别小程序-->
+<image  show-menu-by-longpress
+        src="http://img.gaosan.com/upload/201611/6361410881390606119826380.jpg"/>
+
+
+<!---5.mode:图片裁剪缩放的模式-->
